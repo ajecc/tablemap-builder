@@ -11,7 +11,7 @@ class TablemapFileManager:
     def new_tablemap(self, tablemap_dir, tablemap_name):
         self.tablemap_dir = tablemap_dir
         self.tablemap_name = tablemap_name
-        self.tablemap = Tablemap
+        self.tablemap = Tablemap()
 
     def load_tablemap(self, tablemap_dir, tablemap_name):
         self.tablemap_dir = tablemap_dir
@@ -26,4 +26,4 @@ class TablemapFileManager:
             print('No tablemap has been loaded')
             return
         Tablemap.dump(self.tablemap, os.path.join(self.tablemap_dir, f'{self.tablemap_name}.pickle'))
-        # TODO: save jsons as well
+        open(os.path.join(self.tablemap_dir, f'{self.tablemap_name}.json'), 'w').write(self.tablemap.to_json())
