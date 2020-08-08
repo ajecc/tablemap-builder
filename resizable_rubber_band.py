@@ -5,11 +5,12 @@ class ResizableRubberBand(QtWidgets.QWidget):
     def __init__(self, parent=None):
         super(ResizableRubberBand, self).__init__(parent)
 
+        self.setMinimumWidth(4)
         self.draggable = True
-        self.dragging_threshold = 5
+        self.dragging_threshold = 0
         self.mousePressPos = None
         self.mouseMovePos = None
-        self.borderRadius = 5
+        self.borderRadius = 0
 
         self.setWindowFlags(QtCore.Qt.SubWindow)
         layout = QtWidgets.QHBoxLayout(self)

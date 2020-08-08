@@ -9,7 +9,7 @@ class TablemapArea:
         self.w = w
         self.h = h
         self.label = label
-        self.is_bool_symbol = False
+        self.is_bool_symbol = is_bool_symbol 
 
     def to_json(self):
         bool_val = 0

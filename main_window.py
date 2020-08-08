@@ -139,6 +139,10 @@ class MainWindow(QWidget):
             is_bool_symbol = False
         else:
             is_bool_symbol = True
+        for tablemap_area in self.tablemap_file_manager.tablemap.tablemap_areas:
+            if tablemap_area.label == label:
+                self.display_error('Such a label already exists')
+                return
         self.tablemap_file_manager.tablemap.add(20, 20, 100, 50, label, is_bool_symbol)
         self.tablemap_area_labels.addItem(label)
         self.tablemap_area_labels.sortItems()
