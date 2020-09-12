@@ -32,4 +32,4 @@ Run with `py -3 main.py`.
 
 ---
 
-![tablemap-builer example GUI](https://github.com/ajecc/tablemap-builder/tree/master/examples/example_image.png)
+![tablemap-builer example GUI](examples/example_image.png)
